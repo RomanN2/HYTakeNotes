@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HYTakeNotes"
-  s.version      = "1.0.6"
+  s.version      = "1.0.7"
   s.summary      = "A simple modal view controller with UITextView on it."
 
   s.description  = <<-DESC
@@ -22,9 +22,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "10.0"
 
 
-  s.source       = { :git => "https://github.com/RomanN2/HYTakeNotes.git", :tag => "1.0.6" }
+  s.source       = { :git => "https://github.com/RomanN2/HYTakeNotes.git", :tag => "1.0.7" }
   s.source_files  = "HYTakeNotes/**/*.{swift}"
-  s.resources = "HYTakeNotes/*.{xcassets,xib}"
+  s.resources = "HYTakeNotes/*.{xcassets}"
 
   s.swift_version = "4.2"
 

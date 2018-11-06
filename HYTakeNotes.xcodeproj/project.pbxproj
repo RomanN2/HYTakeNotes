@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		303989092190FB4C004E528A /* HYTakeNotes.h in Headers */ = {isa = PBXBuildFile; fileRef = 303989072190FB4C004E528A /* HYTakeNotes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		30DDD71E2190FEBF00BA9407 /* HYTakeNotes.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DDD71C2190FEBF00BA9407 /* HYTakeNotes.xib */; };
+		30C6F43B2192457500BFE5F0 /* UIInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6F43A2192457500BFE5F0 /* UIInitializer.swift */; };
 		30DDD71F2190FEBF00BA9407 /* HYTakeNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DDD71D2190FEBF00BA9407 /* HYTakeNotes.swift */; };
 		30DDD7312191020200BA9407 /* HYTakeNotesAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30DDD7302191020200BA9407 /* HYTakeNotesAssets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		303989042190FB4C004E528A /* HYTakeNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HYTakeNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		303989072190FB4C004E528A /* HYTakeNotes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYTakeNotes.h; sourceTree = "<group>"; };
-		30DDD71C2190FEBF00BA9407 /* HYTakeNotes.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYTakeNotes.xib; sourceTree = "<group>"; };
+		30C6F43A2192457500BFE5F0 /* UIInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInitializer.swift; sourceTree = "<group>"; };
 		30DDD71D2190FEBF00BA9407 /* HYTakeNotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYTakeNotes.swift; sourceTree = "<group>"; };
 		30DDD7302191020200BA9407 /* HYTakeNotesAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HYTakeNotesAssets.xcassets; sourceTree = "<group>"; };
 		30E5030F2191D0D500804D46 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 			children = (
 				303989072190FB4C004E528A /* HYTakeNotes.h */,
 				30DDD71D2190FEBF00BA9407 /* HYTakeNotes.swift */,
-				30DDD71C2190FEBF00BA9407 /* HYTakeNotes.xib */,
+				30C6F43A2192457500BFE5F0 /* UIInitializer.swift */,
 				30DDD7302191020200BA9407 /* HYTakeNotesAssets.xcassets */,
 				30E5030F2191D0D500804D46 /* Info.plist */,
 			);
@@ -132,7 +132,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				30DDD7312191020200BA9407 /* HYTakeNotesAssets.xcassets in Resources */,
-				30DDD71E2190FEBF00BA9407 /* HYTakeNotes.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C6F43B2192457500BFE5F0 /* UIInitializer.swift in Sources */,
 				30DDD71F2190FEBF00BA9407 /* HYTakeNotes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

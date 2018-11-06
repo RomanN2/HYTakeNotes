@@ -13,25 +13,30 @@ public class HYTakeNotes: UIViewController, UITextViewDelegate {
     public typealias CompletionHandler = (String) -> Void
     public var completion: CompletionHandler = { _ in }
     
-    @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var inputTextView: UITextView!
-    @IBOutlet weak var placeholderLabel: UILabel!
+    var inputTextView: UITextView!
+    var placeholderLabel: UILabel!
     
     public var initialText: String?
     public var placeholder: String?
     
-    override public func viewDidLoad() {
-        super.viewDidLoad()
-        setupSaveButton()
-        setupTextView()
+    override public func loadView() {
+        self.view = UIView(frame: UIScreen.main.bounds)
+        view.backgroundColor = .white
     }
     
-    @IBAction func dismiss() {
+    override public func viewDidLoad() {
+        super.viewDidLoad()
+        UIInitializer().initUI(for: self)
+        inputTextView.becomeFirstResponder()
+        updatePlaceholderVisibility()
+    }
+    
+    @objc func cancel() {
         inputTextView.resignFirstResponder()
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func save() {
+    @objc func save() {
         inputTextView.resignFirstResponder()
         completion(inputTextView.text)
         self.dismiss(animated: true, completion: nil)
@@ -39,18 +44,6 @@ public class HYTakeNotes: UIViewController, UITextViewDelegate {
     
     func updatePlaceholderVisibility() {
         placeholderLabel.isHidden = (inputTextView.text.count > 0)
-    }
-    
-    private func setupSaveButton() {
-        saveButton.layer.cornerRadius = saveButton.frame.height / 2.0
-    }
-    
-    private func setupTextView() {
-        placeholderLabel.text = placeholder
-        inputTextView.text = initialText
-        inputTextView.delegate = self
-        inputTextView.becomeFirstResponder()
-        updatePlaceholderVisibility()
     }
     
     public func textViewDidChange(_ textView: UITextView) {
