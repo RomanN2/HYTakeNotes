@@ -23,4 +23,5 @@ func takeNotes() {
 ```
 
 ## License
+Copyright (c) 2018 Roman Nazarkevych
 HYTakeNotes is available under the MIT license. See the LICENSE file for more info.
