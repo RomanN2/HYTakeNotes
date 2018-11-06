@@ -8,19 +8,19 @@
 
 import UIKit
 
-class HYTakeNotes: UIViewController {
+public class HYTakeNotes: UIViewController {
     
-    typealias CompletionHandler = (String) -> Void
-    var completion: CompletionHandler = { _ in }
+    public typealias CompletionHandler = (String) -> Void
+    public var completion: CompletionHandler = { _ in }
     
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var inputTextView: UITextView!
     @IBOutlet weak var placeholderLabel: UILabel!
     
-    var initialText: String?
-    var placeholder: String?
+    public var initialText: String?
+    public var placeholder: String?
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         setupSaveButton()
         setupTextView()
@@ -53,7 +53,7 @@ class HYTakeNotes: UIViewController {
 }
 
 extension HYTakeNotes: UITextViewDelegate {
-    func textViewDidChange(_ textView: UITextView) {
+    private func textViewDidChange(_ textView: UITextView) {
         updatePlaceholderVisibility()
     }
 }
