@@ -1,0 +1,16 @@
+PODS:
+  - HYTakeNotes (1.0.3)
+
+DEPENDENCIES:
+  - HYTakeNotes
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - HYTakeNotes
+
+SPEC CHECKSUMS:
+  HYTakeNotes: 6466166d2441ce036eec5c0545048e63fca83351
+
+PODFILE CHECKSUM: d23d725bb96d01d1797f6f081bc1345d8bcf0f10
+
+COCOAPODS: 1.5.3
