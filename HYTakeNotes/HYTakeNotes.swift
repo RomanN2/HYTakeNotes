@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class HYTakeNotes: UIViewController {
+public class HYTakeNotes: UIViewController, UITextViewDelegate {
     
     public typealias CompletionHandler = (String) -> Void
     public var completion: CompletionHandler = { _ in }
@@ -19,7 +19,7 @@ public class HYTakeNotes: UIViewController {
     
     public var initialText: String?
     public var placeholder: String?
-
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         setupSaveButton()
@@ -27,18 +27,20 @@ public class HYTakeNotes: UIViewController {
     }
     
     @IBAction func dismiss() {
+        inputTextView.resignFirstResponder()
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func save() {
+        inputTextView.resignFirstResponder()
         completion(inputTextView.text)
-        dismiss()
+        self.dismiss(animated: true, completion: nil)
     }
     
     func updatePlaceholderVisibility() {
         placeholderLabel.isHidden = (inputTextView.text.count > 0)
     }
-
+    
     private func setupSaveButton() {
         saveButton.layer.cornerRadius = saveButton.frame.height / 2.0
     }
@@ -50,10 +52,8 @@ public class HYTakeNotes: UIViewController {
         inputTextView.becomeFirstResponder()
         updatePlaceholderVisibility()
     }
-}
-
-extension HYTakeNotes: UITextViewDelegate {
-    private func textViewDidChange(_ textView: UITextView) {
+    
+    public func textViewDidChange(_ textView: UITextView) {
         updatePlaceholderVisibility()
     }
 }
